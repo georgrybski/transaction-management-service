@@ -2,11 +2,11 @@
 
 # Serviço de Gerenciamento de Transações
 
-Este microserviço, construído com Spring Boot, é responsável por gerenciar transações em uma livraria. Para recuperar informações sobre livros, usuários e endereços, ele se comunica com outros dois microserviços, [Book Management Service](https://github.com/georgrybski/book-management-service) e [User Management Service](https://github.com/georgrybski/user-management-service), por meio de chamadas de API REST.
+Este projeto é um microsserviço feito com Spring Boot que é responsável por gerenciar transações em uma livraria. Para recuperar informações sobre livros, usuários e endereços, ele se comunica com outros dois microsserviços, [Book Management Service](https://github.com/georgrybski/book-management-service) e [User Management Service](https://github.com/georgrybski/user-management-service), por meio de chamadas de API REST.
 
-No entanto, para aumentar a eficiência, os microserviços serão atualizados no futuro para usar o RabbitMQ para comunicação em vez de chamadas de API REST. Além disso, este microserviço também será atualizado para armazenar as informações necessárias das entidades de usuário, endereço e livro em seu próprio banco de dados, em vez de buscar ativamente esses dados em outros microserviços a cada solicitação. Isso melhorará os tempos de resposta e reduzirá a carga nos outros microserviços.
+No entanto, para aumentar a eficiência, os microsserviços serão atualizados no futuro para usar o RabbitMQ para comunicação em vez de chamadas de API REST. Além disso, este microsserviço também será atualizado para armazenar as informações necessárias das entidades de usuário, endereço e livro em seu próprio banco de dados, em vez de buscar ativamente esses dados em outros microsserviços a cada solicitação. Isso melhorará os tempos de resposta e reduzirá a carga nos outros microsserviços.
 
-É importante observar que essas mudanças ainda não foram implementadas, mas estão planejadas para o futuro. Uma vez implementado, o RabbitMQ será usado para manter essas informações atualizadas em todos os microserviços.
+É importante observar que essas mudanças ainda não foram implementadas, mas estão planejadas para o futuro. Uma vez implementado, o RabbitMQ será usado para manter essas informações atualizadas em todos os microsserviços.
 
 ## Instalação
 
