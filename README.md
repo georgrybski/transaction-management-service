@@ -2,7 +2,7 @@
 
 # Transaction Management Service
 
-This microservice, built with Spring Boot, is responsible for managing transactions in a bookstore. To retrieve information about books, users, and addresses, it communicates with two other microservices, Book Management Service and User Management Service, through REST API calls.
+This microservice, built with Spring Boot, is responsible for managing transactions in a bookstore. To retrieve information about books, users, and addresses, it communicates with two other microservices, Book Management Service and [User Management Service](https://github.com/georgrybski/user-management-service), through REST API calls.
 
 However, to increase efficiency, the microservices will be updated in the future to use RabbitMQ for communication instead of REST API calls. Additionally, this microservice will also be updated to store necessary information from user, address, and book entities in its own database, instead of actively fetching this data from other microservices with every request. This will improve response times and reduce the load on the other microservices.
 
@@ -12,9 +12,9 @@ It is important to note that these changes are not yet implemented, but are plan
 
 To use this service, you will need to have Java 17+ and you'll also need to have PostgreSQL installed. 
 
-You will also need to run the Book Management Service and User Management Service.
+You will also need to run the Book Management Service and [User Management Service](https://github.com/georgrybski/user-management-service).
 
-Once you have PostgreSQL, the Book Management Service, and the User Management Service running, and `application.properties` configured, you can start the Image Management Service by running the following command:
+Once you have PostgreSQL, the Book Management Service, and the [User Management Service](https://github.com/georgrybski/user-management-service) running, and `application.properties` configured, you can start the Image Management Service by running the following command:
 
 ```./mvnw spring-boot:run```
 
@@ -22,9 +22,9 @@ Once you have PostgreSQL, the Book Management Service, and the User Management S
 
 The service is configured using the `application.properties` file, located in the root folder of the project. You can change the database URL, username, and password by modifying the `spring.datasource.url`, `spring.datasource.username`, and `spring.datasource.password` properties, respectively.
 
-You will also need to set up the appropriate URLs for the User Management Service and Book Management Service. These URLs are set using the `book-service.url` and `user-service.url` properties, respectively.
+You will also need to set up the appropriate URLs for the [User Management Service](https://github.com/georgrybski/user-management-service) and Book Management Service. These URLs are set using the `book-service.url` and `user-service.url` properties, respectively.
 
-Assuming that the Book Management Service is running on `http://localhost:8080` and the User Management Service is running on `http://localhost:9090`, you can set the URLs in the `application.properties` file as follows:
+Assuming that the Book Management Service is running on `http://localhost:8080` and the [User Management Service](https://github.com/georgrybski/user-management-service) is running on `http://localhost:9090`, you can set the URLs in the `application.properties` file as follows:
 
 ```
 book-service.url=http://localhost:8080
