@@ -2,7 +2,7 @@
 
 # Transaction Management Service
 
-This microservice, built with Spring Boot, is responsible for managing transactions in a bookstore. To retrieve information about books, users, and addresses, it communicates with two other microservices, [Book Management Service](https://github.com/georgrybski/book-management-service) and [User Management Service](https://github.com/georgrybski/user-management-service), through REST API calls.
+This project is a microservice built using Spring Boot. It is responsible for managing transactions in a bookstore. To retrieve information about books, users, and addresses, it communicates with two other microservices, [Book Management Service](https://github.com/georgrybski/book-management-service) and [User Management Service](https://github.com/georgrybski/user-management-service), through REST API calls.
 
 However, to increase efficiency, the microservices will be updated in the future to use RabbitMQ for communication instead of REST API calls. Additionally, this microservice will also be updated to store necessary information from user, address, and book entities in its own database, instead of actively fetching this data from other microservices with every request. This will improve response times and reduce the load on the other microservices.
 
